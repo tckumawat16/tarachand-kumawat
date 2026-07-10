@@ -1,0 +1,44 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-summary {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.leadership-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+}
+
+.leadership-list li:last-child {
+  border-bottom: none;
+}
+
+.leadership-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 820px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

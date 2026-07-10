@@ -1,0 +1,26 @@
+.highlight-log {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 40px;
+}
+
+.highlight-log li {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+}
+
+.log-marker {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .highlight-log {
+    grid-template-columns: 1fr;
+  }
+}

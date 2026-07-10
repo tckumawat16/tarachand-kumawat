@@ -1,0 +1,245 @@
+.hero {
+  position: relative;
+  padding: 140px 0 100px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 60% 30%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent);
+  animation: status-pulse 2.2s ease-out infinite;
+}
+
+@keyframes status-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(62, 214, 181, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(62, 214, 181, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(62, 214, 181, 0); }
+}
+
+.hero-name {
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.hero-titles {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent-2);
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.hero-summary {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  max-width: 560px;
+  margin-bottom: 22px;
+}
+
+.hero-meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  margin-bottom: 34px;
+}
+
+.meta-sep {
+  margin: 0 10px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ---- Diagram ---- */
+.hero-diagram {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.diagram-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.diagram-lines line {
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+}
+
+.core-circle {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.core-label-top {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.core-label-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--text-tertiary);
+  letter-spacing: 0.1em;
+}
+
+.node-dot {
+  fill: var(--accent-2);
+}
+
+.node-pulse {
+  fill: none;
+  stroke: var(--accent-2);
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-origin: center;
+  animation: node-pulse 3s ease-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes node-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+.diagram-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.diagram-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.label-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.label-sub {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.label-exp {
+  top: 6%;
+  left: 50%;
+}
+
+.label-odoo {
+  top: 30%;
+  left: 92%;
+  text-align: left;
+}
+
+.label-erp {
+  top: 76%;
+  left: 92%;
+  text-align: left;
+}
+
+.label-clients {
+  top: 76%;
+  left: 8%;
+  text-align: right;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  animation: cue-bounce 2s ease-in-out infinite;
+}
+
+@keyframes cue-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-diagram {
+    max-width: 340px;
+    margin-top: 12px;
+  }
+
+  .hero {
+    padding: 110px 0 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .label-value {
+    font-size: 0.85rem;
+  }
+}

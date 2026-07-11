@@ -186,20 +186,29 @@
 
 .label-odoo {
   top: 30%;
-  left: 92%;
+  left: 90%;
+  width: 130px;
   text-align: left;
+  align-items: flex-start;
+  transform: translate(0, -50%);
 }
 
 .label-erp {
   top: 76%;
-  left: 92%;
+  left: 90%;
+  width: 130px;
   text-align: left;
+  align-items: flex-start;
+  transform: translate(0, -50%);
 }
 
 .label-clients {
   top: 76%;
-  left: 8%;
+  left: 10%;
+  width: 120px;
   text-align: right;
+  align-items: flex-end;
+  transform: translate(-100%, -50%);
 }
 
 .scroll-cue {

@@ -67,6 +67,9 @@ export default function Certifications() {
                   <img
                     src={`${import.meta.env.BASE_URL}${cert.image}`}
                     alt={`${cert.title} certificate awarded by ${cert.issuer}`}
+                    loading="lazy"
+                    width="1200"
+                    height="800"
                   />
                   <span className="cert-thumb-overlay">
                     <ZoomIn size={20} />

@@ -1,4 +1,4 @@
-import { ArrowDown, Download, Mail } from "lucide-react";
+import { ArrowDown, Download, Mail, BadgeCheck } from "lucide-react";
 import { profile, nodeStats } from "../data/resumeData";
 import { useReveal } from "../hooks/useReveal";
 import "./Hero.css";
@@ -12,10 +12,20 @@ export default function Hero() {
       <div className="hero-grid" aria-hidden="true" />
       <div className="container hero-inner">
         <div ref={textRef} className="hero-text reveal">
-          <span className="status-tag">
-            <span className="status-dot" />
-            AVAILABLE &middot; OPEN TO NEW OPPORTUNITIES
-          </span>
+          <div className="hero-badges">
+            <span className="status-tag">
+              <span className="status-dot" />
+              AVAILABLE &middot; OPEN TO NEW OPPORTUNITIES
+            </span>
+            <a
+              className="toptal-badge"
+              href={profile.toptal}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BadgeCheck size={14} /> Toptal Verified Expert
+            </a>
+          </div>
 
           <h1 className="hero-name">{profile.name}</h1>
 
@@ -34,8 +44,9 @@ export default function Hero() {
           <div className="hero-cta">
             <a
               className="btn btn-primary"
-              href={`${import.meta.env.BASE_URL}${profile.resumeFile}`}
-              download
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
             >
               <Download size={16} /> Download Resume
             </a>

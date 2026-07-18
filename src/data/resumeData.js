@@ -12,7 +12,8 @@ export const profile = {
   linkedin: "https://linkedin.com/in/tara-chand-kumawat",
   github: "https://github.com/tckumawat16",
   hackerrank: "https://www.hackerrank.com/profile/tckumawat16",
-  resumeFile: "resume/Tarachand_Kumawat_Resume.pdf",
+  toptal: "https://www.toptal.com/developers/resume/tarachand-kumawat",
+  resumeUrl: "https://drive.google.com/file/d/1-KgHRdk6rsJywPS9qFeBCfNhmFNJJneU/view?usp=sharing",
   tagline:
     "I design and build backend systems and ERP platforms that hold up in production — FastAPI microservices, Odoo implementations, and cloud migrations for teams across the USA, UK, and Middle East.",
   summary:

@@ -23,6 +23,14 @@
   align-items: center;
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
 .status-tag {
   display: inline-flex;
   align-items: center;
@@ -35,7 +43,25 @@
   border: 1px solid transparent;
   padding: 7px 12px;
   border-radius: 999px;
-  margin-bottom: 24px;
+}
+
+.toptal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  border: 1px solid transparent;
+  padding: 7px 12px;
+  border-radius: 999px;
+  transition: filter var(--transition-fast);
+}
+
+.toptal-badge:hover {
+  filter: brightness(1.15);
 }
 
 .status-dot {

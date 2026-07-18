@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Github, Trophy, Download } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Trophy, BadgeCheck, Download } from "lucide-react";
 import { profile } from "../data/resumeData";
 import { useReveal } from "../hooks/useReveal";
 import "./Contact.css";
@@ -33,6 +33,12 @@ const LINKS = [
     value: "tckumawat16",
     href: profile.hackerrank,
     icon: Trophy,
+  },
+  {
+    label: "Toptal",
+    value: "Verified Expert",
+    href: profile.toptal,
+    icon: BadgeCheck,
   },
 ];
 
@@ -71,8 +77,9 @@ export default function Contact() {
 
           <a
             className="btn btn-primary contact-resume-btn"
-            href={`${import.meta.env.BASE_URL}${profile.resumeFile}`}
-            download
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
           >
             <Download size={16} /> Download Full Resume
           </a>

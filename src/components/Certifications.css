@@ -1,3 +1,19 @@
+.toptal-credential {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toptal-credential-text a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .cert-grid {
   display: flex;
   flex-direction: column;
@@ -136,6 +152,12 @@
 }
 
 @media (max-width: 780px) {
+  .toptal-credential {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
   .cert-grid {
     grid-template-columns: 1fr;
   }

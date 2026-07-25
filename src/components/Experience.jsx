@@ -12,7 +12,16 @@ function ExperienceItem({ item }) {
       <div className="timeline-content">
         <span className="timeline-period">{item.period}</span>
         <h3 className="timeline-role">{item.role}</h3>
-        <p className="timeline-company">{item.company}</p>
+        <p className="timeline-company">
+          {item.companyUrl ? (
+            <a href={item.companyUrl} target="_blank" rel="noreferrer">
+              {item.company}
+            </a>
+          ) : (
+            item.company
+          )}
+          {item.location && <span className="timeline-location"> &middot; {item.location}</span>}
+        </p>
         <ul className="timeline-points">
           {item.points.map((p) => (
             <li key={p}>{p}</li>

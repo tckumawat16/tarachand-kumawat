@@ -64,6 +64,21 @@
   margin-bottom: 16px;
 }
 
+.timeline-company a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+.timeline-company a:hover {
+  color: var(--accent);
+}
+
+.timeline-location {
+  color: var(--text-tertiary);
+}
+
 .timeline-points {
   margin-bottom: 18px;
 }

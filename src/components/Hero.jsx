@@ -66,9 +66,7 @@ export default function Hero() {
             </g>
 
             <g className="diagram-core">
-              <circle cx="210" cy="210" r="46" className="core-circle" />
-              <text x="210" y="205" textAnchor="middle" className="core-label-top">TK</text>
-              <text x="210" y="222" textAnchor="middle" className="core-label-sub">core</text>
+              <circle cx="210" cy="210" r="56" className="core-circle" />
             </g>
 
             {[
@@ -83,6 +81,14 @@ export default function Hero() {
               </g>
             ))}
           </svg>
+
+          <img
+            className="core-photo"
+            src={`${import.meta.env.BASE_URL}images/profile.webp`}
+            alt={profile.name}
+            width="240"
+            height="240"
+          />
 
           <div className="diagram-labels">
             {nodeStats.map((s) => (

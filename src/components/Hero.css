@@ -144,18 +144,16 @@
   stroke-width: 1.5;
 }
 
-.core-label-top {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
-  fill: var(--text);
-}
-
-.core-label-sub {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  fill: var(--text-tertiary);
-  letter-spacing: 0.1em;
+.core-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 118px;
+  height: 118px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--bg), 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .node-dot {
@@ -266,6 +264,11 @@
   .hero-diagram {
     max-width: 340px;
     margin-top: 12px;
+  }
+
+  .core-photo {
+    width: 84px;
+    height: 84px;
   }
 
   .hero {

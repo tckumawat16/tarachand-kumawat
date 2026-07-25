@@ -61,7 +61,9 @@ export const skillGroups = [
 
 export const experience = [
   {
-    company: "Narith Business Solutions Pvt. Ltd.",
+    company: "Narith Business Services Pvt. Ltd.",
+    companyUrl: "https://www.narith.co/",
+    location: "Mumbai",
     role: "Technical Lead / Senior Full Stack Developer",
     period: "Nov 2023 – Mar 2026",
     points: [
@@ -76,6 +78,8 @@ export const experience = [
   },
   {
     company: "Zeeve Deeptech Pvt. Ltd.",
+    companyUrl: "https://www.zeeve.io/",
+    location: "Noida",
     role: "Team Lead",
     period: "May 2021 – Oct 2023",
     points: [
@@ -88,7 +92,9 @@ export const experience = [
     stack: ["Python", "FastAPI", "Node.js", "React.js", "PostgreSQL", "AWS", "Docker", "CI/CD"],
   },
   {
-    company: "Prolitus Technologies",
+    company: "Prolitus Technologies Pvt. Ltd.",
+    companyUrl: "https://www.prolitus.com/",
+    location: "Noida",
     role: "Senior Software Engineer / Odoo Technical Lead",
     period: "Sep 2014 – Apr 2021",
     points: [

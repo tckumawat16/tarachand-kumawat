@@ -57,38 +57,40 @@ export default function Hero() {
         </div>
 
         <div ref={diagramRef} className="hero-diagram reveal" role="img" aria-label="Career overview diagram showing key stats">
-          <svg viewBox="0 0 420 420" className="diagram-svg">
-            <g className="diagram-lines">
-              <line x1="210" y1="210" x2="210" y2="70" />
-              <line x1="210" y1="210" x2="350" y2="150" />
-              <line x1="210" y1="210" x2="350" y2="290" />
-              <line x1="210" y1="210" x2="70" y2="290" />
-            </g>
-
-            <g className="diagram-core">
-              <circle cx="210" cy="210" r="56" className="core-circle" />
-            </g>
-
-            {[
-              { x: 210, y: 70, i: 0 },
-              { x: 350, y: 150, i: 1 },
-              { x: 350, y: 290, i: 2 },
-              { x: 70, y: 290, i: 3 },
-            ].map((pos) => (
-              <g key={pos.i} className="diagram-node" style={{ "--delay": `${pos.i * 0.4}s` }}>
-                <circle cx={pos.x} cy={pos.y} r="8" className="node-dot" />
-                <circle cx={pos.x} cy={pos.y} r="8" className="node-pulse" />
+          <div className="diagram-visual">
+            <svg viewBox="0 0 420 420" className="diagram-svg">
+              <g className="diagram-lines">
+                <line x1="210" y1="210" x2="210" y2="70" />
+                <line x1="210" y1="210" x2="350" y2="150" />
+                <line x1="210" y1="210" x2="350" y2="290" />
+                <line x1="210" y1="210" x2="70" y2="290" />
               </g>
-            ))}
-          </svg>
 
-          <img
-            className="core-photo"
-            src={`${import.meta.env.BASE_URL}images/profile.webp`}
-            alt={profile.name}
-            width="240"
-            height="240"
-          />
+              <g className="diagram-core">
+                <circle cx="210" cy="210" r="56" className="core-circle" />
+              </g>
+
+              {[
+                { x: 210, y: 70, i: 0 },
+                { x: 350, y: 150, i: 1 },
+                { x: 350, y: 290, i: 2 },
+                { x: 70, y: 290, i: 3 },
+              ].map((pos) => (
+                <g key={pos.i} className="diagram-node" style={{ "--delay": `${pos.i * 0.4}s` }}>
+                  <circle cx={pos.x} cy={pos.y} r="8" className="node-dot" />
+                  <circle cx={pos.x} cy={pos.y} r="8" className="node-pulse" />
+                </g>
+              ))}
+            </svg>
+
+            <img
+              className="core-photo"
+              src={`${import.meta.env.BASE_URL}images/profile.webp`}
+              alt={profile.name}
+              width="240"
+              height="240"
+            />
+          </div>
 
           <div className="diagram-labels">
             {nodeStats.map((s) => (

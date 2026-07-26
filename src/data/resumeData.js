@@ -59,6 +59,33 @@ export const skillGroups = [
   { group: "ERP", items: ["Odoo Community & Enterprise", "ERP Implementation", "Data Migration"] },
 ];
 
+export const aiTools = [
+  {
+    id: "codex",
+    name: "OpenAI Codex",
+    icon: "terminal",
+    description: "Used for scaffolding backend modules and generating quick CLI scripts, letting me move faster through repetitive setup work.",
+  },
+  {
+    id: "claude-code",
+    name: "Claude Code",
+    icon: "bot",
+    description: "My go-to for larger refactors and multi-file changes — planning an approach, then executing it across a codebase with review at each step.",
+  },
+  {
+    id: "cursor",
+    name: "Cursor",
+    icon: "mouse-pointer",
+    description: "Daily driver IDE for AI-assisted editing — inline suggestions and chat-based edits.",
+  },
+  {
+    id: "copilot",
+    name: "GitHub Copilot",
+    icon: "sparkles",
+    description: "Autocomplete for everyday coding — boilerplate, tests, and repetitive patterns, so I can focus on architecture and logic.",
+  },
+];
+
 export const experience = [
   {
     company: "Narith Business Services Pvt. Ltd.",

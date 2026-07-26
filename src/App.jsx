@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Highlights from "./components/Highlights.jsx";
 import Skills from "./components/Skills.jsx";
+import AiTools from "./components/AiTools.jsx";
 import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 import Certifications from "./components/Certifications.jsx";
@@ -22,6 +23,7 @@ export default function App() {
         <About />
         <Highlights />
         <Skills />
+        <AiTools />
         <Experience />
         <Projects />
         <Certifications />

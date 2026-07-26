@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "ai-tools", label: "AI Tools" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certifications" },
